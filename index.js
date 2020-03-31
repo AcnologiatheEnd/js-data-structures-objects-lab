@@ -10,10 +10,11 @@ function updateDriverWithKeyAndValue(obj, key, value) {
 }
 
 function destructivelyUpdateDriverWithKeyAndValue(obj, key, value) {
+  const newObj = { ...obj }
   
-  obj[key] = value;
+  delete newObj.key
  
-  return obj;
+  return newObj;
 }
 
 function deleteFromDriverByKey(obj, key) {
