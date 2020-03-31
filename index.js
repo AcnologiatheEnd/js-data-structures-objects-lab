@@ -1,7 +1,15 @@
 // Write your solution in this file!
 let driver = {}
 
-function updateDriverWithKeyAndValue( obj, key, value) {
+function updateDriverWithKeyAndValue(obj, key, value) {
+  const newObj = { ...obj };
+ 
+  newObj[key] = value;
+ 
+  return newObj;
+}
+
+function nondestructivelyUpdateObject(obj, key, value) {
   const newObj = { ...obj };
  
   newObj[key] = value;
